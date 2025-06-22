@@ -4,6 +4,7 @@ get_filename_component(REPO_ROOT "${CMAKE_SOURCE_DIR}" DIRECTORY)
 
 include(ztest_build_extensions)
 
+zephyr_include_module(":self")
 zephyr_include_module("${REPO_ROOT}/blink-driver-module:blink-driver-module")
 zephyr_include_module("${REPO_ROOT}/custom-ek-ra6m3-module:custom-ek-ra6m3-module")
 zephyr_include_module("${REPO_ROOT}/math-lib-module:math-lib-module")

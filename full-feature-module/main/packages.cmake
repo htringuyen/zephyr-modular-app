@@ -1,0 +1,4 @@
+add_subdirectory_ifdef(CONFIG_MATH_LIB_MODULE_ARITHMETIC_BOOLEAN clang/arithmetic/boolean)
+add_subdirectory_ifdef(CONFIG_MATH_LIB_MODULE_ARITHMETIC_DECIMAL clang/arithmetic/decimal)
+add_subdirectory_ifdef(CONFIG_MATH_LIB_MODULE_BITMATH clang/bitmath)
+add_subdirectory_ifdef(CONFIG_MATH_LIB_MODULE_INTERNAL clang/internal)

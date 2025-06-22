@@ -1,0 +1,9 @@
+# load package enabling/disabling configs
+rsource "Kconfig.packages"
+
+# optionally load package specific configs
+orsource "main/clang/arithmetic/Kconfig.defconfig"
+orsource "main/clang/arithmetic/boolean/Kconfig.defconfig"
+orsource "main/clang/arithmetic/decimal/Kconfig.defconfig"
+orsource "main/clang/bitmath/Kconfig.defconfig"
+orsource "main/clang/internal/Kconfig.defconfig"

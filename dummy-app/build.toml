@@ -1,0 +1,24 @@
+[project]
+name = "zephyr-app"
+version = "1.0.0"
+
+[zephyr.modules]
+self = { path = ":self" }
+blink-driver = { path = "${REPO_ROOT}/blink-driver-module", name = "blink-driver-module" }
+custom-ek-ra6m3 = { path = "${REPO_ROOT}/custom-ek-ra6m3-module", name = "custom-ek-ra6m3-module" }
+math-lib = { path = "${REPO_ROOT}/math-lib-module", name = "math-lib-module" }
+
+# Module package configurations (Kconfig equivalent)
+[zephyr.packages]
+[zephyr.packages.math-lib]
+BITMATH = true
+ARITHMETIC_BOOLEAN = true
+
+[zephyr.packages.blink-driver]
+GPIO_LED = true
+
+[zephyr.packages.custom-ek-ra6m3]
+# Add custom-ek-ra6m3 packages here as needed
+
+[variables]
+REPO_ROOT = "${CMAKE_SOURCE_DIR}/.."
