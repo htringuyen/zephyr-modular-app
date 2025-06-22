@@ -10,6 +10,6 @@ zephyr_include_module("${REPO_ROOT}/math-lib-module:math-lib-module")
 
 find_package(Zephyr COMPONENTS ztest_build_ext HINTS $ENV{ZEPHYR_BASE})
 
-project(test_math_lib_module_internal)
+project(dummy-app)
 
 target_sources(app PRIVATE main.c)
