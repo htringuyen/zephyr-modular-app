@@ -1,0 +1,1 @@
+add_subdirectory_ifdef(CONFIG_BLINK_DRIVER_MODULE_GPIO_LED clang/gpio_led)

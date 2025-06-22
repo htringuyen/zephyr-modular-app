@@ -1,0 +1,2 @@
+zephyr_library()
+zephyr_library_sources(CONFIG_BLINK_GPIO_LED gpio_led.c)

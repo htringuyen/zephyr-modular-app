@@ -1,0 +1,6 @@
+# Source kconfig files if exists, otherwise, ignore
+orsource "Kconfig.packages"
+orsource "package1/Kconfig.package1"
+orsource "package2/Kconfig.package2"
+# ...
+# orsource "packageN/Kconfig.packageN

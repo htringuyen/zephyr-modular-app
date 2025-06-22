@@ -1,0 +1,33 @@
+menu "Application type"
+
+config TWISTER_TESTING
+    bool "Enable twister testing mode"
+    default n
+
+endmenu
+
+menu "Package enabling/disabling for math-lib-module module"
+
+config MATH_LIB_MODULE_ARITHMETIC
+    bool "Enable arithmetic package of math-lib-module module"
+    default n
+
+config MATH_LIB_MODULE_ARITHMETIC_BOOLEAN
+    bool "Enable arithmetic/module package of math-lib-module module"
+    default n
+
+config MATH_LIB_MODULE_ARITHMETIC_DECIMAL
+    bool "Enable arithmetic/decimal package of math-lib-module module"
+    default n
+
+config MATH_LIB_MODULE_BITMATH
+    bool "Enable bitmath package of math-lib-module module"
+    default n
+
+config MATH_LIB_MODULE_INTERNAL
+    bool "Private package internal, enabled only if its dependents is selected"
+    depends on TWISTER_TESTING || MATH_LIB_MODULE_ARITHMETIC_BOOLEAN || MATH_LIB_MODULE_ARITHMETIC_DECIMAL || MATH_LIB_MODULE_BITMATH || MATH_LIB_MODULE_ARITHMETIC
+    default y if MATH_LIB_MODULE_ARITHMETIC_BOOLEAN || MATH_LIB_MODULE_ARITHMETIC_DECIMAL || MATH_LIB_MODULE_BITMATH || MATH_LIB_MODULE_ARITHMETIC
+    default n if TWISTER_TESTING
+
+endmenu

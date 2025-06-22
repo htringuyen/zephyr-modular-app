@@ -1,0 +1,23 @@
+menu "Application type"
+
+config TWISTER_TESTING
+    bool "Enable twister testing mode"
+    default n
+
+endmenu
+
+menu "Package enabling/disabling for blink-driver-module module"
+
+if EXISTS_CUSTOM_CONFIG_BLINK_DRIVER_MODULE_GPIO_LED
+source "clang/gpio_led/Kconfig.gpio_led"
+endif
+
+if !EXISTS_CUSTOM_CONFIG_BLINK_DRIVER_MODULE_GPIO_LED
+config BLINK_DRIVER_MODULE_GPIO_LED
+    bool "Enable gpio_led package of blink-driver-module module"
+    default n
+    help
+      Enable the gpio_led package for the blink-driver-module.
+endif
+
+endmenu

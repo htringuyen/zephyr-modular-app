@@ -1,0 +1,6 @@
+tests:
+  math_lib_module.internal: 
+    tags:
+      - math_lib_module
+    platform_allow:
+      - unit_testing_ext

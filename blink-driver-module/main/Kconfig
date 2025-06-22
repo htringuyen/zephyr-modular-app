@@ -1,0 +1,8 @@
+# optionally source global configs for this module
+orsource "Kconfig.defconfig"
+
+# load package enabling/disabling configs
+rsource "Kconfig.packages"
+
+# optionally load package specific configs
+orsource "main/clang/blinkdriver/Kconfig.defconfig"
